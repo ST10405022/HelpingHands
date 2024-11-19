@@ -1,0 +1,26 @@
+﻿@model List<HelpingHands.Models.Programme>
+
+@{
+    ViewData["BodyClass"] = "about-background";
+}
+<h2>Manage Programmes</h2>
+
+<div class="content-box">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Programme Name</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var programme in Model)
+            {
+                <tr>
+                    <td>@programme.ProgrammeName</td>
+                    <td>@programme.Description</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

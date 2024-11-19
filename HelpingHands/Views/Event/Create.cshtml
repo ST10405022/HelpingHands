@@ -1,0 +1,37 @@
+﻿@model HelpingHands.Models.Event
+
+@{
+    ViewData["Title"] = "Create Event";
+    ViewData["BodyClass"] = "about-background";
+}
+
+<h2>Create Event</h2>
+
+<form method="post" action="/Event/Create">
+    <div class="content-box">
+        <div class="mb-3">
+            <label for="EventName" class="form-label">Event Name</label>
+            <input type="text" class="form-control" id="EventName" name="EventName" required />
+        </div>
+
+        <div class="mb-3">
+            <label for="Date" class="form-label">Event Date</label>
+            <input type="date" class="form-control" id="Date" name="Date" required />
+        </div>
+
+        <div class="mb-3">
+            <label for="Location" class="form-label">Location</label>
+            <input type="text" class="form-control" id="Location" name="Location" required />
+        </div>
+
+        <div class="mb-3">
+            <label for="Status" class="form-label">Status</label>
+            <select class="form-control" id="Status" name="Status">
+                <option value="Upcoming">Upcoming</option>
+                <option value="Completed">Completed</option>
+                <option value="Cancelled">Cancelled</option>
+            </select>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Create Event</button>
+</form>

@@ -1,0 +1,143 @@
+/* Base Styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: darkolivegreen;
+}
+
+footer {
+    background-color: darkolivegreen;
+    font-size: 0.9em;
+    height: 100px; /* Increase height */
+    padding: 20px; /* Add spacing */
+    text-align: center; /* Center text */
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+        border-color: #0056b3;
+    }
+
+/* Custom dropdown styles */
+.navbar .dropdown-menu {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+}
+
+.navbar .dropdown-item {
+    color: #007bff;
+}
+
+    .navbar .dropdown-item:hover {
+        background-color: #e9ecef;
+    }
+
+/* Navbar Color */
+.navbar {
+    background-color: #343a40; /* Dark gray */
+}
+
+.navbar-logo {
+    width: 50px; /* Adjust size */
+    height: 50px; /* Adjust size */
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image fits properly */
+}
+
+
+.nav-link {
+    color: black !important; /* White text */
+}
+
+    .nav-link:hover {
+        color: dimgrey !important; /* Light text on hover */
+    }
+
+.home-background {
+    background-image: url('/images/Charity_Presentation_3.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.about-background {
+    background-image: url('/images/Charity_Presentation_2.png');
+    background-size: auto;
+    background-position: center;
+}
+
+.custom-header {
+    background-color: darkslategray; /* Replace with your desired color */
+}
+
+.custom-footer {
+    background-color: darkolivegreen; /* Custom footer color */
+    height: 100px; /* Increase height */
+    padding: 20px; /* Add spacing */
+    text-align: center; /* Center text */
+    font-size: 16px; /* Adjust font size */
+}
+
+.dashboard-summary {
+    display: flex;
+    gap: 20px;
+}
+
+.summary-item {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+    width: 200px;
+    text-align: center;
+}
+
+.table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+    .table th, .table td {
+        padding: 10px;
+        border: 1px solid #ddd;
+    }
+
+.carousel-item img {
+    height: 500px;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.content-box {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+    .content-box h2 {
+        margin-top: 0;
+        color: #333;
+    }
+
+    .content-box p {
+        color: #555;
+        line-height: 1.6;
+    }

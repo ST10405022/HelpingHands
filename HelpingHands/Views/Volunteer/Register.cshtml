@@ -1,0 +1,31 @@
+﻿@model HelpingHands.Controllers.VolunteerViewModel
+
+@{
+    ViewData["Title"] = "Volunteer Registration";
+    ViewData["BodyClass"] = "about-background";
+}
+
+<h2>Register as Volunteer</h2>
+<form asp-action="Register" method="post">
+    <div class="content-box">
+        <label for="Name">Full Name:</label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+    <div class="content-box">
+        <label for="ContactNumber">Contact Number:</label>
+        <input asp-for="ContactNumber" class="form-control" />
+    </div>
+    <div class="content-box">
+        <label for="Email">Email Address:</label>
+        <input asp-for="Email" type="email" class="form-control" />
+    </div>
+    <div class="content-box">
+        <label for="Skills">Skills:</label>
+        <textarea asp-for="Skills" class="form-control"></textarea>
+    </div>
+    <div class="content-box">
+        <label for="Availability">Availability (e.g., Weekends, Weekdays):</label>
+        <input asp-for="Availability" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary mt-3">Register</button>
+</form>

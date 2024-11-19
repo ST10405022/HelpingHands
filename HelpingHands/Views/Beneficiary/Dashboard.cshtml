@@ -1,0 +1,19 @@
+﻿@model HelpingHands.Models.BeneficiaryViewModel
+
+@{
+    ViewData["Title"] = "My Dashboard";
+    ViewData["BodyClass"] = "about-background";
+}
+
+<h2>Welcome, @Model.Name!</h2>
+
+<div class="content-box">
+    <h4>Your Contact Information:</h4>
+    <p>Email: @Model.Email</p>
+    <p>Contact Number: @Model.ContactNumber</p>
+    <p>Resource Needs: @Model.ResourceNeeds</p>
+</div>
+
+<div>
+    <a class="btn btn-primary" href="/Beneficiary/Edit">Edit Profile</a>
+</div>

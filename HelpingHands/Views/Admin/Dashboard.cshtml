@@ -1,0 +1,45 @@
+﻿@model AdminDashboardViewModel
+
+@{
+    ViewData["Title"] = "Admin Dashboard";
+    ViewData["BodyClass"] = "about-background";
+}
+<h2>Admin Dashboard</h2>
+
+    <div class="dashboard-summary">
+        <div class="summary-item">
+            <h4>Volunteers</h4>
+            <p>@Model.VolunteerCount</p>
+        </div>
+        <div class="summary-item">
+            <h4>Programmes</h4>
+            <p>@Model.ProgrammeCount</p>
+        </div>
+        <div class="summary-item">
+            <h4>Resources</h4>
+            <p>@Model.ResourceCount</p>
+        </div>
+    </div>
+
+<h3>Upcoming Events</h3>
+<div class="content-box">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Event Name</th>
+                <th>Date</th>
+                <th>Location</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var eventItem in Model.UpcomingEvents)
+            {
+                <tr>
+                    <td>@eventItem.EventName</td>
+                    <td>@eventItem.Date</td>
+                    <td>@eventItem.Location</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

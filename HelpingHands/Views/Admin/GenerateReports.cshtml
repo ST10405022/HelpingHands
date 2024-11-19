@@ -1,0 +1,31 @@
+﻿@model List<dynamic>
+
+@{
+    ViewData["Title"] = "Generate Reports";
+    ViewData["BodyClass"] = "about-background";
+}
+
+<h2>Donation Report</h2>
+<div class="content-box">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Programme</th>
+                <th>Total Donations</th>
+                <th>Number of Donations</th>
+                <th>Donors</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var report in Model)
+            {
+                <tr>
+                    <td>@report.Programme</td>
+                    <td>@report.TotalDonated</td>
+                    <td>@report.DonationCount</td>
+                    <td>@string.Join(", ", report.Donors)</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

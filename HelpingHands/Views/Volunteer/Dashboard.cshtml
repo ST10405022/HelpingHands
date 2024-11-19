@@ -1,0 +1,21 @@
+﻿@model List<string>
+
+@{
+    ViewData["Title"] = "My Dashboard";
+    ViewData["BodyClass"] = "about-background";
+}
+<div class="content-box">
+    <h1>Volunteer Dashboard</h1>
+    <p>Welcome, @UserSession.UserName!</p>
+</div>
+
+<div class="content-box">
+    <p>Here are your tasks:</p>
+    <ul>
+        @foreach (var task in Model)
+        {
+            <li>@task</li>
+        }
+    </ul>
+</div>
+<a href="/Volunteer/Logout" class="btn btn-danger">Logout</a>

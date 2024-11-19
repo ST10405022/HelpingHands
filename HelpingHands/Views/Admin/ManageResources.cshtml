@@ -1,0 +1,27 @@
+﻿@model List<HelpingHands.Models.Resource>
+
+@{
+    ViewData["BodyClass"] = "about-background";
+}
+
+<h2>Manage Resources</h2>
+
+<div class="content-box">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Resource Name</th>
+                <th>Quantity</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var resource in Model)
+            {
+                <tr>
+                    <td>@resource.ResourceName</td>
+                    <td>@resource.Quantity</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

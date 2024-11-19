@@ -1,0 +1,31 @@
+﻿@model List<Donation>
+
+@{
+    ViewData["Title"] = "View Donations";
+    ViewData["BodyClass"] = "about-background";
+}
+
+<h2>Donations</h2>
+<div class="content-box">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Donor Name</th>
+                <th>Amount</th>
+                <th>Date</th>
+                <th>Program Funded</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var donation in Model)
+            {
+                <tr>
+                    <td>@donation.DonorName</td>
+                    <td>@donation.Amount</td>
+                    <td>@donation.Date.ToString("d")</td>
+                    <td>@donation.ProgramFunded</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

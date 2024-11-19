@@ -1,0 +1,28 @@
+﻿@model IEnumerable<HelpingHands.Controllers.TaskViewModel>
+
+@{
+    ViewData["Title"] = "View Tasks";
+}
+
+<h2>Assigned Tasks</h2>
+<div class="content-box">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Task Name</th>
+                <th>Description</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var task in Model)
+            {
+                <tr>
+                    <td>@task.TaskName</td>
+                    <td>@task.Description</td>
+                    <td>@task.Status</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

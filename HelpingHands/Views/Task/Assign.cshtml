@@ -1,0 +1,23 @@
+﻿@model HelpingHands.Controllers.TaskAssignmentViewModel
+
+@{
+    ViewData["Title"] = "Task Assignment";
+    ViewData["BodyClass"] = "about-background";
+}
+
+<h2>Assign Task to Volunteer</h2>
+<form asp-action="Assign" method="post">
+    <div class="content-box">
+        <label for="VolunteerName">Volunteer Name:</label>
+        <input asp-for="VolunteerName" class="form-control" />
+    </div>
+    <div class="content-box">
+        <label for="TaskDescription">Task Description:</label>
+        <textarea asp-for="TaskDescription" class="form-control"></textarea>
+    </div>
+    <div class="content-box">
+        <label for="Deadline">Deadline:</label>
+        <input asp-for="Deadline" type="date" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary mt-3">Assign Task</button>
+</form>

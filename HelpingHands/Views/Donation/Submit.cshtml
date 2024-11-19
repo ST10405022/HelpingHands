@@ -1,0 +1,31 @@
+﻿@model HelpingHands.Controllers.DonationViewModel
+
+@{
+    ViewData["Title"] = "Donation Submission";
+    ViewData["BodyClass"] = "about-background";
+}
+
+<h2>Submit a Donation</h2>
+<form asp-action="Submit" method="post">
+    <div class="content-box">
+        <label for="DonorName">Donor Name:</label>
+        <input asp-for="DonorName" class="form-control" />
+    </div>
+    <div class="content-box">
+        <label for="DonationType">Donation Type:</label>
+        <select asp-for="DonationType" class="form-control">
+            <option value="Money">Money</option>
+            <option value="Clothes">Clothes</option>
+            <option value="Food">Food</option>
+        </select>
+    </div>
+    <div class="content-box">
+        <label for="Amount">Amount (if applicable):</label>
+        <input asp-for="Amount" type="number" class="form-control" />
+    </div>
+    <div class="content-box">
+        <label for="Comments">Additional Comments:</label>
+        <textarea asp-for="Comments" class="form-control"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary mt-3">Submit Donation</button>
+</form>

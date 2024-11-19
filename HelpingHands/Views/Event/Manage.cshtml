@@ -1,0 +1,33 @@
+﻿@model IEnumerable<HelpingHands.Controllers.EventViewModel>
+
+@{
+    ViewData["Title"] = "Manage Events";
+    ViewData["BodyClass"] = "about-background";
+}
+
+<h2>Event Management</h2>
+<a href="/Event/Create" class="btn btn-primary mb-3">Create New Event</a>
+<div class="content-box">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Event Name</th>
+                <th>Date</th>
+                <th>Location</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var eventItem in Model)
+            {
+            <tr>
+                <td>@eventItem.EventName</td>
+                <td>@eventItem.Date</td>
+                <td>@eventItem.Location</td>
+                <td>@eventItem.Status</td>
+                
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>
